@@ -1,7 +1,5 @@
 package lat.pam.myapplication;
 
-
-
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -19,8 +17,8 @@ public class DetailActivity extends AppCompatActivity {
 
         int id = getIntent().getIntExtra("id", -1);
 
-        ArrayList<Food> list = FoodData.getData(getApplicationContext());
-        Food food = list.get(id);
+        FoodData data = new FoodData(getApplicationContext());
+        Food food = data.readById(id);
 
         if (food != null) {
             TextView judulTV = findViewById(R.id.detail_judul);
@@ -28,7 +26,10 @@ public class DetailActivity extends AppCompatActivity {
             TextView deskripsiTV = findViewById(R.id.detail_deskripsi);
             ImageView image = findViewById(R.id.detail_photo);
 
-            image.setImageDrawable(food.image);
+            String PACKAGE_NAME = getPackageName();
+            int imageResource = getResources().getIdentifier("@drawable/" + food.image, null, PACKAGE_NAME);
+            image.setImageDrawable(getResources().getDrawable(imageResource));
+
             judulTV.setText(food.judul);
             hargaTV.setText(String.valueOf(food.harga));
             deskripsiTV.setText(food.deskripsi);

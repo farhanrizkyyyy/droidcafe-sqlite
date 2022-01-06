@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:layout_margin="48dp"
-    tools:context=".MainActivity">
+    tools:context=".RegisterActivity">
 
     <TextView
         android:id="@+id/username_label"
@@ -14,10 +14,8 @@
         android:layout_height="wrap_content"
         android:text="Username" />
 
-
-
     <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/username_text"
+        android:id="@+id/reg_username_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
@@ -29,24 +27,17 @@
         android:text="Password" />
 
     <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/password_text"
+        android:id="@+id/reg_password_text"
         android:layout_width="match_parent"
         android:inputType="textPassword"
         android:layout_height="wrap_content"/>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/login_button"
+        android:id="@+id/register_button"
         android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Login"
         android:backgroundTint="@android:color/holo_blue_light"/>
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/register_r_button"
-        android:layout_marginTop="20dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Daftar Disini" />
 
 </androidx.appcompat.widget.LinearLayoutCompat>

@@ -3,12 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Farhan/Documents/Kuliah/Semester 5/Praktikum Pengembangan Aplikasi Mobile/UAS/DroidCafe/app/src/main/res/menu/app_menu.xml" value="0.21666666666666667" />
         <entry key="..\:/Users/fany/Desktop/CafeIfany/app/src/main/res/drawable/ic_action_more_horiz_24.xml" value="0.21388888888888888" />
         <entry key="..\:/Users/fany/Desktop/CafeIfany/app/src/main/res/layout/activity_detail.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/fany/Desktop/CafeIfany/app/src/main/res/layout/activity_home.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/fany/Desktop/CafeIfany/app/src/main/res/layout/activity_main.xml" value="0.2927272727272727" />
         <entry key="..\:/Users/fany/Desktop/CafeIfany/app/src/main/res/layout/food_item.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/fany/Desktop/CafeIfany/app/src/main/res/menu/app_menu.xml" value="0.20416666666666666" />
+        <entry key="..\:/android-native-project/CafeIfany/app/src/main/res/layout/activity_home.xml" value="0.1" />
+        <entry key="..\:/android-native-project/CafeIfany/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/android-native-project/CafeIfany/app/src/main/res/layout/activity_register.xml" value="0.1" />
       </map>
     </option>
   </component>

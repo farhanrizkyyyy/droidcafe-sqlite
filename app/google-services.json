@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "527726298651",
+    "project_id": "uas-ppam-28539",
+    "storage_bucket": "uas-ppam-28539.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:527726298651:android:2c8e1379bf5877b3ea5abe",
+        "android_client_info": {
+          "package_name": "lat.pam.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "527726298651-m4ue2rfd41qi0dl75pesc10lfkqihhls.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDBbeufulHmTv6LQGFydPbGjF7rc4R4zn8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "527726298651-m4ue2rfd41qi0dl75pesc10lfkqihhls.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

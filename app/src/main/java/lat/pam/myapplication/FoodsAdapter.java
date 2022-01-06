@@ -35,8 +35,11 @@ public class FoodsAdapter extends RecyclerView.Adapter<FoodsAdapter.ListViewHold
         Food food = foodData.get(position);
         holder.judul.setText(food.judul);
         holder.harga.setText(String.valueOf(food.harga));
-        holder.image.setBackground(food.image);
-        holder.image.setImageDrawable(food.image);
+
+        String PACKAGE_NAME = holder.image.getContext().getPackageName();
+        int imageResource = holder.image.getContext().getResources().getIdentifier("@drawable/" + food.image, null, PACKAGE_NAME);
+        holder.image.setBackground(holder.image.getContext().getResources().getDrawable(imageResource));
+        holder.image.setImageDrawable(holder.image.getContext().getResources().getDrawable(imageResource));
     }
 
     @Override
@@ -57,7 +60,7 @@ public class FoodsAdapter extends RecyclerView.Adapter<FoodsAdapter.ListViewHold
 
         @Override
         public void onClick(View view) {
-            int selected = getLayoutPosition();
+            int selected = foodData.get(getLayoutPosition()).id;
             Intent intent = new Intent(view.getContext(), DetailActivity.class);
             intent.putExtra("id", selected);
             view.getContext().startActivity(intent);

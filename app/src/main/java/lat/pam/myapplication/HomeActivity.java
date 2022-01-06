@@ -12,19 +12,34 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.TextView;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import java.util.ArrayList;
 
 public class HomeActivity extends AppCompatActivity {
+    private FirebaseAuth mAuth;
+    private FirebaseUser currentUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        ArrayList<Food> data = FoodData.getData(getApplicationContext());
+        mAuth = FirebaseAuth.getInstance();
+        currentUser = mAuth.getCurrentUser();
+
+        if (currentUser != null) {
+            TextView selamat = findViewById(R.id.selamat_datang);
+            selamat.setText("Hello, " + currentUser.getEmail());
+        }
+
+        FoodData data = new FoodData(getApplicationContext());
+        ArrayList<Food> list = data.read();
         RecyclerView recyclerView = findViewById(R.id.list_item_view);
-        FoodsAdapter adapter = new FoodsAdapter(data);
+        FoodsAdapter adapter = new FoodsAdapter(list);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
@@ -43,6 +58,7 @@ public class HomeActivity extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
                 this.finish();
+                mAuth.signOut();
                 break;
             default:
         }

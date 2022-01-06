@@ -7,12 +7,14 @@ import android.util.Log;
 import java.io.File;
 
 public class Food {
+    int id;
     String judul;
     String deskripsi;
     int harga;
-    Drawable image;
+    String image;
 
-    Food(String judul, String deskripsi, int harga, Drawable image) {
+    Food(int id, String judul, String deskripsi, int harga, String image) {
+        this.id = id;
         this.judul = judul;
         this.deskripsi = deskripsi;
         this.harga = harga;
